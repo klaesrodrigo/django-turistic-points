@@ -19,8 +19,11 @@ from django.conf.urls import include
 from rest_framework import routers
 from core.api.viewsets import TuristicPointViewSet
 
+from resources.api.viewsets import ResourceViewSet
+
 router = routers.DefaultRouter()
 router.register("turistic-points", TuristicPointViewSet)
+router.register("resources", ResourceViewSet)
 
 urlpatterns = [
     path("", include(router.urls)),
