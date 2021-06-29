@@ -19,11 +19,13 @@ from django.conf.urls import include
 from rest_framework import routers
 
 from addresses.api.viewsets import AddressViewSet
+from avaliations.api.viewsets import AvaliationViewSet
 from core.api.viewsets import TuristicPointViewSet
 from resources.api.viewsets import ResourceViewSet
 
 router = routers.DefaultRouter()
 router.register("addresses", AddressViewSet)
+router.register("avaliations", AvaliationViewSet)
 router.register("resources", ResourceViewSet)
 router.register("turistic-points", TuristicPointViewSet)
 
