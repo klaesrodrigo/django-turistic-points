@@ -17,3 +17,7 @@ class TuristicPoint(models.Model):
 
     def __str__(self):
         return self.name
+
+    @property
+    def complete_description2(self):
+        return "%s - %s" % (self.name, self.description)
